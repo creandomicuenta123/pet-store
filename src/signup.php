@@ -29,7 +29,7 @@ include('config/database.php');
         else{
             $sql = "INSERT INTO users
                 (firstname, lastname, email, password)
-            values ('$fname','$lname','$email','$passsw')
+            values ('$fname','$lname','$email','$passw')
             ";
 
             $ans = pg_query($conn,$sql);
@@ -42,7 +42,13 @@ include('config/database.php');
     }else{
         echo 'no existe';
     }
+    //$connection = pg_connect("host=localhost dbname=mi_basededatos user=mi_usuario password=mi_contraseña");
+    //$connection = pg_connect("host=localhost dbname=mi_basededatos user=mi_usuario password=mi_contraseña");
 
+    //if (!$connection) {
+    //    die("Error de conexión a la base de datos.");
+    //}
+    
 
 
 ?>
