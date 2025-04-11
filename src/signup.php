@@ -7,7 +7,8 @@ include('config/database.php');
     $email = $_POST['e_mail'];
     $passw = $_POST['p_assw'];
 
-
+    //encriptar
+    $hashed_password = $password_hash = ($passw. PASSWORD_DEFAULT);
 
     $sql_validate_email = "
             select 
@@ -29,12 +30,13 @@ include('config/database.php');
         else{
             $sql = "INSERT INTO users
                 (firstname, lastname, email, password)
-            values ('$fname','$lname','$email','$passw')
+            values ('$fname','$lname','$email','$hashed_password')
             ";
 
             $ans = pg_query($conn,$sql);
             if ($ans){
-                echo'ya fue ingresado';
+                echo "<script>alert('user has been created, go to login')</script>";
+                echo ("refreh: 0;URL =http://localhost/pert-store/src/signin.html");
             }else{
                 echo'error';
             }
@@ -42,12 +44,7 @@ include('config/database.php');
     }else{
         echo 'no existe';
     }
-    //$connection = pg_connect("host=localhost dbname=mi_basededatos user=mi_usuario password=mi_contraseña");
-    //$connection = pg_connect("host=localhost dbname=mi_basededatos user=mi_usuario password=mi_contraseña");
-
-    //if (!$connection) {
-    //    die("Error de conexión a la base de datos.");
-    //}
+   
     
 
 
