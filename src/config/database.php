@@ -6,7 +6,7 @@ $dbname = "petstore";
 $user = "postgres";
 $password = "1004509527";
 */
-
+/* supa base conection*/
 $host = "aws-0-us-east-2.pooler.supabase.com";
 $port = "6543";
 $dbname = "postgres";

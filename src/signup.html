@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Registro</title>
 </head>
 <body>
-   <center><h1>register form</h1></center> <br>
+    <center><h1>Register Form</h1></center>
+
     <form name="register-form" action="signup.php" method="post">
         <table border="0" align="center">
-                <tr><td><input type="text"name="f_name" placeholder="your name" required></td></tr>
-                <tr><td><input type="text"name="l_name" placeholder="first name" required></td></tr>
-                <tr><td><input type="text"name="e_mail" placeholder="email" required></td></tr>
-                <tr><td><input type="text"name="p_assw" placeholder="************" required></td></tr><br>
-                <tr><td align = "center"><button>Register</button></td></tr>
-                
-
-     </table>
-        
-        
-
+            <tr>
+                <td><input type="text" name="f_name" placeholder="Your name" required></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="l_name" placeholder="First name" required></td>
+            </tr>
+            <tr>
+                <td><input type="email" name="e_mail" placeholder="Email" required></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="p_assw" placeholder="************" required></td>
+            </tr>
+            <tr>
+                <td align="center"><button type="submit">Register</button></td>
+            </tr>
+        </table>
     </form>
-    
 </body>
 </html>
