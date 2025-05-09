@@ -7,7 +7,8 @@
     $email = $_POST['e_mail'];
     $passw = $_POST['p_assw'];
 
-    $hashed_password = password_hash($passw, PASSWORD_DEFAULT);  //encriptar contraseña//
+    //$hashed_password = password_hash($passw, PASSWORD_DEFAULT);  //encriptar contraseña//
+      $hashed_password = $pawws;
 
     $sql_validate_email = "
     select
